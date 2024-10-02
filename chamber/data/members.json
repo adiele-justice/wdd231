@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Company One",
+        "address": "123 Main St, City, ST 12345",
+        "phone": "(123) 456-7890",
+        "website": "https://www.companyone.com",
+        "image": "company1.jpg",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Company Two",
+        "address": "456 Elm St, City, ST 12345",
+        "phone": "(123) 456-7891",
+        "website": "https://www.companytwo.com",
+        "image": "company2.jpg",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Company Three",
+        "address": "789 Oak St, City, ST 12345",
+        "phone": "(123) 456-7892",
+        "website": "https://www.companythree.com",
+        "image": "company3.jpg",
+        "membershipLevel": "Member"
+    }
+]
