@@ -1,21 +1,23 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const memberList = document.getElementById('member-list');
-    const lastModified = document.getElementById('last-modified');
-    const currentYear = document.getElementById('current-year');
 
-    // Fetch member data
     const fetchMembers = async () => {
-        const response = await fetch('data/members.json');
-        const members = await response.json();
-        displayMembers(members);
+        try {
+            const response = await fetch('data/members.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const members = await response.json();
+            displayMembers(members);
+        } catch (error) {
+            console.error('Failed to fetch members:', error);
+            memberList.innerHTML = '<p>Error loading member data.</p>'; // Display error message
+        }
     };
 
-    // Display members
     const displayMembers = (members) => {
         memberList.innerHTML = ''; // Clear existing members
         members.forEach(member => {
             const card = document.createElement('div');
-            card.classList.add('card');
+            card.classList.add('member-card'); // Use consistent class name
             card.innerHTML = `
                 <img src="images/${member.image}" alt="${member.name}">
                 <h3>${member.name}</h3>
@@ -27,17 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     };
 
-    // Toggle view
     document.getElementById('toggle-view').addEventListener('click', () => {
         memberList.classList.toggle('grid-view');
     });
 
-    // Set last modified date
-    lastModified.textContent = document.lastModified;
-
-    // Set current year
-    currentYear.textContent = new Date().getFullYear();
-
-    // Load members
     await fetchMembers();
 });

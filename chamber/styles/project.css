@@ -125,29 +125,30 @@ main {
     background-color: rgba(194, 224, 198, 0.951);
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 9rem;
+    text-align: center;
     max-width: 800px;
-    margin: 30PX auto;
-    padding: 2rem 1rem;
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
+    margin: auto;
 }
 
 .card1 h2 {
     color: #333;
+    text-align: center;
+}
+
+main button {
+    display: block;
 }
 
 .member-card {
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 6px;
     border-radius: 5px;
     text-align: center;
 }
 
 .member-card img {
-    max-width: 100px;
+    max-width: 140px;
     height: auto;
     border-radius: 5px;
 }

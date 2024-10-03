@@ -1,26 +1,58 @@
 [
     {
         "name": "Company One",
-        "address": "123 Main St, City, ST 12345",
-        "phone": "(123) 456-7890",
+        "address": "23 Main St, City, ST 12305",
+        "phone": "(123) 406-1890",
         "website": "https://www.companyone.com",
         "image": "company1.jpg",
         "membershipLevel": "Gold"
     },
     {
         "name": "Company Two",
-        "address": "456 Elm St, City, ST 12345",
-        "phone": "(123) 456-7891",
+        "address": "456 Elm St, City, ST 345",
+        "phone": "(423) 317-7091",
         "website": "https://www.companytwo.com",
         "image": "company2.jpg",
         "membershipLevel": "Silver"
     },
     {
         "name": "Company Three",
-        "address": "789 Oak St, City, ST 12345",
-        "phone": "(123) 456-7892",
+        "address": "709 Oak St, City, ST 14245",
+        "phone": "(119) 726-0592",
         "website": "https://www.companythree.com",
         "image": "company3.jpg",
         "membershipLevel": "Member"
+    },
+    {
+        "name": "Company four",
+        "address": "103 Milan St, City, ST 12309",
+        "phone": "(023) 454-7890",
+        "website": "https://www.companyfour.com",
+        "image": "company4.jpg",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Company five",
+        "address": "056 Elmando St, City, ST 19305",
+        "phone": "(122) 056-7891",
+        "website": "https://www.companyfive.com",
+        "image": "company5.jpg",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "company six",
+        "address": "019 Olain St, City, ST 1205",
+        "phone": "(123) 156-2852",
+        "website": "https://www.companysix.com",
+        "image": "company6.jpg",
+        "membershipLevel": "Member"
+    },
+    {
+        "name": "company seven",
+        "address": "789 Oakland St, City, ST 1315",
+        "phone": "(114) 256-7692",
+        "website": "https://www.companyseven.com",
+        "image": "company7.jpg",
+        "membershipLevel": "platinum"
     }
 ]
