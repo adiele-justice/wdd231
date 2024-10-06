@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Course home page for WDD 231">
+    <meta name="author" content="Your Name">
+    <title> WDD-231 Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/week1.css">
+    <script src="scripts/week1.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <img src="images/logo.jpg" alt="Logo">
+        <h1>Adiele Justice Iheanyi</h1>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/adiele-justice" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://linkedin.com/in/justice-adiele-491727331" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="courses">
+            <h2>Course List</h2>
+            <div id="course-cards"></div>
+            <div id="credit-total"></div>
+            <button onclick="filterCourses('all')">Show All</button>
+            <button onclick="filterCourses('CSE')">Show CSE Courses</button>
+            <button onclick="filterCourses('WDD')">Show WDD Courses</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Adiele Justice Iheanyi, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
