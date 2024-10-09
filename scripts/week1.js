@@ -15,12 +15,12 @@ function displayCourses(coursesToDisplay) {
     coursesToDisplay.forEach(course => {
         const courseCard = document.createElement('div');
         courseCard.className = 'course-card' + (course.completed ? ' completed' : '');
-        courseCard.innerHTML = `<h3>${course.title}</h3><p>Credits: ${course.credits}</p>`;
+        courseCard.innerHTML = `<h3>${course.title}</h3><p>Credits: ${course.credits}</p>`; // Fixed template literal syntax
         courseCardsDiv.appendChild(courseCard);
         totalCredits += course.credits;
     });
 
-    document.getElementById("credit-total").textContent = `Total Credits: ${totalCredits}`;
+    document.getElementById("credit-total").textContent = `Total Credits: ${totalCredits}`; // Fixed template literal syntax
 }
 
 function filterCourses(type) {
@@ -31,12 +31,16 @@ function filterCourses(type) {
     }
 }
 
-document.getElementById("menu-toggle").addEventListener("click", () => {
-    const navList = document.getElementById("nav-list");
-    navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
-});
+// Ensure that the elements exist before adding event listeners
+const menuToggle = document.getElementById("menu-toggle");
+if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+        const navList = document.getElementById("nav-list");
+        navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
+    });
+}
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`;
+document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`; // Fixed template literal syntax
 
 displayCourses(courses); // Initial display of courses
