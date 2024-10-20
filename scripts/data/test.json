@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Company A",
+        "address": "123 Main St, City, State",
+        "phone": "123-456-7890",
+        "website": "https://companya.com",
+        "image": "images/companyA.jpg",
+        "membership_level": 1
+    },
+    {
+        "name": "Company B",
+        "address": "456 Elm St, City, State",
+        "phone": "098-765-4321",
+        "website": "https://companyb.com",
+        "image": "images/companyB.jpg",
+        "membership_level": 2
+    }
+    
+]

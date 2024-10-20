@@ -1,0 +1,174 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #2467ae;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header img{
+    max-width: 120px;
+    padding-right: 60%;
+    padding-top: 7px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none; /* Hide the button initially */
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure main takes at least full viewport height */
+    text-align: center; /* Center text within sections */
+}
+
+section {
+    margin: 20px 0; /* Add some space between sections */
+    max-width: 800px; /* Limit width of sections for better readability */
+    width: 100%; /* Allow sections to be responsive */
+}
+
+.hero img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+h2 {
+    text-align: center;
+}
+
+#view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#view-toggle button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.list {
+    display: block;
+}
+
+.member {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.member img {
+    max-width: 100px;
+    height: auto;
+}
+
+.member a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+
+footer {    background: #2467ae;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+
+}
+    
+    
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.call-to-action, .current-events, .weather, .company-spotlights {
+    padding: 1em;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 40px;
+
+
+
+
+
+}
+
+/*call to action section styles*/
+.call-to-action {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .call-to-action h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: 'Protest Revolution', sans-serif;
+  }
+  .call-to-action a button:hover {
+    background-color: gray;
+  }
+  .call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: 'Protest Riot', sans-serif;
+  }
+  .call-to-action .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background-color: #2467ae;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .call-to-action .cta-btn:hover {
+    background-color: gray;
+  }
+@media (min-width: 768px) {
+    .call-to-action, .current-events, .weather, .company-spotlights {
+        display: grid;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}

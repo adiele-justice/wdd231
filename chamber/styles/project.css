@@ -6,42 +6,47 @@ body, h1, h2, p, ul {
 
 /* Body Styles */
 body {
+
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
-
 /* Header Styles */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: right;
-}
 
-header img{
-    max-width: 110px;
-    padding-right: 70%;
-}
+    header {
+        background-color: rgb(61, 61, 166);
+        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 15% auto; 
+        align-items: center; 
+      }
+      
+      header img {
+        max-width: 100px;
+        padding-left: 90%;
+      }
+      header nav {
+        display: flex;
+        margin-bottom: 10px;
+        padding-left: 30%;
+      }
+      
+      header nav a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 15px;
+        font-weight: bold;
+      }
 
-nav ul {
-    list-style-type: none;
-    padding-right: 20%;
-    margin-bottom: 10px;
-}
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    color: gray;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+    nav a:hover {
+        color: gray;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
 
 /* Main Styles */
 main {
@@ -100,21 +105,36 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 90%;
 }
-
-/* Styling for data and weather sections */
-/*.data-box,
-.weather-box {
-    margin: 0;
+/*call to action section styles*/
+.call-to-action {
+  text-align: center;
+  margin-top: 40px;
+}
+.call-to-action h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Protest Revolution', sans-serif;
+}
+.call-to-action a button:hover {
+  background-color: gray;
+}
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: 'Protest Riot', sans-serif;
+}
+.call-to-action .cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.call-to-action .cta-btn:hover {
+  background-color: gray;
 }
 
-.data-box h2,
-.weather-box h2 {
-    margin-top: 0;
-}
-
-.weather-icon {
-    font-size: 24px;
-}*/
 
 /* Main styles */
 .card1 p {

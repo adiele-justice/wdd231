@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="logo">
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <form method="GET" action="thankyou.html">
+            <fieldset>
+                <legend>Membership Application Form</legend>
+
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" title="Your first name" required autocomplete="given-name">
+                </label>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Your last name" required autocomplete="family-name">
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" name="orgTitle" title="Your title in the organization" required pattern="[A-Za-z\- ]{7,}">
+                </label>
+
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Your email address" required autocomplete="email" placeholder="example@email.com">
+                </label>
+
+                <label>
+                    Mobile Phone Number:
+                    <input type="tel" name="mobile" title="Your mobile number" required autocomplete="tel">
+                </label>
+
+                <label>
+                    Organization Name:
+                    <input type="text" name="organization" title="Your organization name" required autocomplete="organization">
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membershipLevel" required>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description:
+                    <textarea name="description" title="Description of your business" required></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <script>
+                    document.getElementById('timestamp').value = new Date().toISOString();
+                </script>
+
+                <input type="submit" value="Submit Application">
+            </fieldset>
+        </form>
+
+        <div class="membership-cards">
+            <div class="card" id="np-card">
+                <h2>NP Membership</h2>
+                <p>No fee for non-profit organizations.</p>
+                <a href="#np-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="bronze-card">
+                <h2>Bronze Membership</h2>
+                <p>Basic benefits with a low fee.</p>
+                <a href="#bronze-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="silver-card">
+                <h2>Silver Membership</h2>
+                <p>Additional benefits for a moderate fee.</p>
+                <a href="#silver-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="gold-card">
+                <h2>Gold Membership</h2>
+                <p>Premium benefits for businesses.</p>
+                <a href="#gold-modal" class="modal-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <p>Special events and networking opportunities for non-profit organizations.</p>
+            </div>
+        </div>
+
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <p>Access to basic resources and events.</p>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <p>Additional training and advertising opportunities.</p>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <p>Premium benefits including spotlight positions on the homepage.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us at: <a href="mailto:info@busipartnerandco.com">info@yourwebsite.com</a></p>
+        <p>&copy; <span id="current-year"></span> Adiele Justice Iheanyi . 2024</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/styles.js"></script>
+</body>
+</html>

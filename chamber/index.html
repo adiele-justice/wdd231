@@ -1,59 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Home</title>
+    <title>commerce</title>
+    <meta name="description" content="it contains all about Blue Sea Rafting HTML About-Us Page">
+    <meta name="author" content="Adiele Justice Iheanyi">
     <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Chamber of Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <img src="images/hero-image.jpg" alt="Chamber Hero Image" class="hero-image">
-        </section>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.webp" alt="logo">
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="trips.html">Events</a>
+      <a href="form.html">Contact Us</a>
+    </nav>
+  </header>
 
-        <section class="call-to-action">
-            <h2>Join the Chamber of Commerce!</h2>
-            <a href="join.html" class="cta-button">Join Now</a>
-        </section>
+  <!-- Main Content -->
+  <main>
+    <div class="hero">
+      <img src="images/cover.jpg" alt="home image">
+      <h1 class="home">Urban Skate Alliance</h1>
+      <article>
+        <h2>We make it our priority to put a smile on the face of all those who patronize our services and to our workers also. It's said that a smiley face brightens the heart and the day.</h2>
+      </article>
+    </div>
 
-        <section class="current-events">
-            <h2>Current Events</h2>
-            <div id="event-list">
-                <!-- Events will be dynamically inserted here -->
-            </div>
-        </section>
 
-        <section class="weather" id="weather">
-            <h2>Weather Forecast</h2>
-            <div id="weather-info">
-                <!-- Weather data will be dynamically inserted here -->
-            </div>
-        </section>
+    <section class="adventure-section">
+      <h2>Adventure Awaits You!</h2>
+      <h3>Here's some of our skateboarding parks around the world >>>></h3>
+      <div class="flex">
+        <!-- d ynamically alline arrays here-->
+      </div>
+      <section class="call-to-action">
+        <h3>Ready to Shred Some Pavement?</h3>
+        <p>Join us for thrilling skateboarding sessions!</p>
+        <a href="trips.html" class="cta-btn">Checkout our skateboarding parks</a>
+    </section>
 
-        <section class="spotlights">
-            <h2>Company Spotlights</h2>
-            <div id="spotlight-list">
-                <!-- Spotlights will be dynamically inserted here -->
-            </div>
-        </section>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts/project.js"></script>
+  <!-- Footer -->
+  <footer>
+    <h3>&copy; 2024 ✨Urban Skate Alliance✨ Adiele Justice Iheanyi✨</h3>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="script/skate.js"></script>
 </body>
 </html>
