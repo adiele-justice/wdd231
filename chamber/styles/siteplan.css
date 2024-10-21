@@ -1,0 +1,65 @@
+/* Default styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+body p, ul {
+    margin-left: 2rem;
+}
+
+body h2 {
+    margin-left: 1rem;
+}
+
+header {
+    background-color: #251f7e;
+    color: bisque;
+}
+
+header h1 {
+text-align: center;
+}
+
+header, section, footer {
+    margin: 0 auto;
+    padding: 20px;
+}
+    
+h2 {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #251f7e;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        margin-left: 2rem; /* Adjust margin-left for smaller screens */
+    }
+    header, section, footer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        margin-left: 1rem; /* Further adjust margin-left for smaller screens */
+    }
+    header, section, footer {
+        width: 95%;
+    }
+}
