@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Your existing CSS file -->
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+
+<header>
+    <img src="images/logo.webp" alt="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="directory.html">About</a>
+        <a href="discover.html">Discover</a>
+        <a href="join.html">Contact Us</a>
+    </nav>
+  </header>
+<main>
+
+    <main>
+        <div class="grid-container">
+            <aside class="sidebar">
+                <div id="visitMessage"></div>
+                <h2>Demographics</h2>
+                <p>Population: 50,000</p>
+                <p>Median Income: $60,000</p>
+                <h2>Events</h2>
+                <p>Annual Festival: Every July</p>
+            </aside>
+
+            <section class="gallery">
+                <h2>Explore Our Area</h2>
+                <div class="image-grid">
+                    <img data-src="images/photo1.jpg" alt="Local Attraction 1" class="lazy" />
+                    <img data-src="images/photo2.jpg" alt="Local Attraction 2" class="lazy" />
+                    <img data-src="images/photo3.jpg" alt="Local Attraction 3" class="lazy" />
+                    <img data-src="images/photo4.jpg" alt="Local Attraction 4" class="lazy" />
+                    <img data-src="images/photo5.jpg" alt="Local Attraction 5" class="lazy" />
+                    <img data-src="images/photo6.jpg" alt="Local Attraction 6" class="lazy" />
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Adiele Justice Iheanyi</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
