@@ -22,21 +22,59 @@ nav a:hover {
     color: gray;
 }
 
+
   header nav {
     display: flex;
-    margin-bottom: 10px;
-    padding-left: 35%;
-  }
-  
-  header nav a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically if needed */
+
+}
+
+/* Optional: Add some padding and styles for better visibility */
+header nav a {
+    padding: 10px 15px; /* Add padding to links */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff /* Text color */
+}
+
+/* Media query for larger screens (optional, adjust as needed) */
+@media (min-width: 768px) {
+    header nav {
+        /* Additional styles for larger screens if needed */
+        /* Example: add some padding */
+        padding: 20px;
+    }
+}
+
 #menu-toggle {
     display: none; /* Hide the button initially */
+}
+
+/* cta css*/
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #ffcc00;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.current-events, .weather, .company-spotlights {
+    padding: 20px;
+    background: #f4f4f4;
+    margin: 20px 0;
 }
 
 
