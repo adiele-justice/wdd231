@@ -1,51 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to the Chamber of Commerce</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="directory.html">About</a>
-            <a href="discover.html">Discover</a>
-            <a href="join.html">Contact Us</a>
-        </nav>
-    </header>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <main>
-        <section class="hero">
-            <img src="images/hero.jpg" alt="Chamber of Commerce Hero Image">
-            <a href="join.html" class="cta-button">Join the Chamber of Commerce</a>
-        </section>
+        <meta name="description" content="home page">
+        <meta name="author" content="Adiele Justice Iheanyi"> 
+        <title>Home page</title>
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- Facebook Meta Tags -->
+        <meta property="og:title" content="Home page">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://your-github-repo.com/image.jpg">
+        <meta property="og:url" content="https://Desktop/wdd231/chamber/discover.html">
+        <link rel="stylesheet" href="styles/styles.css"> <!-- Your existing CSS file -->
 
-        <section class="current-events">
-            <h2>Current Events</h2>
-            <p>Check out our upcoming events!</p>
-            <!-- Add dynamic events here -->
-        </section>
+</head>
 
-        <section class="weather" id="weather-section">
-            <h2>Current Weather</h2>
-            <p id="weather-info">Loading...</p>
-            <h3>3-Day Forecast</h3>
-            <ul id="forecast"></ul>
-        </section>
+        <body>
+            <header>
+                <img src="images/logo.webp" alt="urban skate alliance Logo">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="discover.html">discover</a>
+                    <a href="join.html">Join Us</a>
+                </nav> 
+                
+              </header>
+              <main>
+                <section class="her">
+                    <img src="images/hero.jpg" alt="community garden image">
+                    <div class="hero-text">
+                        <h2>Join the vibrant Community Garden Initiative for a blossoming experience!</h2>
+                        <p>Immerse yourself in a world of growth and sustainable living!</p>
+                    </div>
+                </section>
+            
+                <section class="call-to-action">
+                    <h3>Ready to Cultivate Together?</h3>
+                    <p>Join us for enriching gardening sessions!</p>
+                    <a href="join.html" class="cta-btn">Explore our community gardens</a>
+                </section>            
+        
+                <section class="weather" id="weather-section">
+                    <h2>Current Weather</h2>
+                    <p id="weather-info">Loading...</p>
+                    <h3>3-Day Forecast</h3>
+                    <ul id="forecast"></ul>
+                </section>
+        
+                <section class="company-spotlights" id="spotlights">
+                    <h2>Company Spotlights</h2>
+                    <div id="membersContainer" class="grid-view"></div>
+                </section>
+              </main>
 
-        <section class="company-spotlights" id="spotlights">
-            <h2>Company Spotlights</h2>
-            <div id="spotlight-content"></div>
-        </section>
-    </main>
 
     <footer>
-        <p>&copy; 2024 Chamber of Commerce</p>
+        <p>&copy; <span id="current-year"></span> Adiele Justice Iheanyi</p>
+        <p>Last modified: <span id="last-modified"></span></p>
     </footer>
-
     <script src="scripts/index.js"></script>
 </body>
 </html>

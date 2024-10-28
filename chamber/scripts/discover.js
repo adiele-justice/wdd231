@@ -36,3 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update last visit date
     localStorage.setItem("lastVisit", currentDate);
 });
+// Initialize the page
+document.getElementById('current-year').innerText = new Date().getFullYear();
+document.getElementById('last-modified').innerText = document.lastModified;

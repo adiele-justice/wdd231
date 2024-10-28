@@ -6,3 +6,8 @@
         document.getElementById('mobile').textContent = params.get('mobile');
         document.getElementById('organization').textContent = params.get('organization');
         document.getElementById('timestamp').textContent = new Date(params.get('timestamp')).toLocaleString();
+
+
+// Initialize the page
+document.getElementById('current-year').innerText = new Date().getFullYear();
+document.getElementById('last-modified').innerText = document.lastModified;

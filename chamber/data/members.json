@@ -1,18 +1,39 @@
 [
     {
-        "companyName": "Gold Company 1",
-        "logo": "images/gold-company1-logo.png",
-        "phone": "123-456-7890",
-        "address": "123 Gold St, City, State",
-        "website": "http://goldcompany1.com",
-        "membership": "Gold"
+      "name": "Tech Innovators",
+      "address": "123 Tech Lane, Silicon Valley, CA",
+      "phone": "123-456-7890",
+      "website": "https://techinnovators.com",
+      "image": "company1.jpg",
+      "membershipLevel": 1,
+      "info": "Leading the way in tech solutions."
     },
     {
-        "companyName": "Silver Company 1",
-        "logo": "images/silver-company1-logo.png",
-        "phone": "987-654-3210",
-        "address": "456 Silver St, City, State",
-        "website": "http://silvercompany1.com",
-        "membership": "Silver"
+      "name": "Green Solutions",
+      "address": "456 Green St, Eco City, CA",
+      "phone": "234-567-8901",
+      "website": "https://greensolutions.com",
+      "image": "company2.jpg",
+      "membershipLevel": 2,
+      "info": "Sustainable products for a better tomorrow."
+    },
+    {
+      "name": "Health Plus",
+      "address": "789 Health Ave, Wellness City, CA",
+      "phone": "345-678-9012",
+      "website": "https://healthplus.com",
+      "image": "company3.jpg",
+      "membershipLevel": 3,
+      "info": "Your partner in health and wellness."
+    },
+    {
+      "name": "Finance Hub",
+      "address": "101 Finance Blvd, Money Town, CA",
+      "phone": "456-789-0123",
+      "website": "https://financehub.com",
+      "image": "company4.jpg",
+      "membershipLevel": 1,
+      "info": "Financial solutions for everyone."
     }
-]
+  ]
+  

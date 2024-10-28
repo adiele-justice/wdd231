@@ -1,53 +1,91 @@
-// Weather API
-const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
-const city = 'YOUR_CITY'; // Replace with your city
-const weatherSection = document.getElementById('weather-info');
-const forecastList = document.getElementById('forecast');
+const weatherApiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+const chamberLocation = 'YOUR_CITY,YOUR_COUNTRY'; // Replace with the chamber location
 
 async function fetchWeather() {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-    const data = await response.json();
-    
-    const temp = Math.round(data.main.temp);
-    const weatherDescription = data.weather.map(item => item.description.charAt(0).toUpperCase() + item.description.slice(1)).join(', ');
-    
-    weatherSection.innerHTML = `Current Temperature: ${temp}°C<br>Description: ${weatherDescription}`;
-    
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${chamberLocation}&appid=${weatherApiKey}&units=metric`);
+        const data = await response.json();
+        displayWeather(data);
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+function displayWeather(data) {
+    const temperature = Math.round(data.main.temp);
+    const description = capitalizeWords(data.weather.map(item => item.description).join(', '));
+    document.getElementById('weather-info').innerText = `Current Temperature: ${temperature}°C - ${description}`;
+
+    // Forecast can be fetched from a separate API endpoint if needed
     fetchForecast();
 }
 
 async function fetchForecast() {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`);
-    const data = await response.json();
-    const forecastDays = data.list.filter((item, index) => index % 8 === 0).slice(0, 3); // 3-day forecast
-
-    forecastList.innerHTML = forecastDays.map(item => {
-        const temp = Math.round(item.main.temp);
-        return `<li>${new Date(item.dt * 1000).toLocaleDateString()}: ${temp}°C</li>`;
-    }).join('');
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${chamberLocation}&appid=${weatherApiKey}&units=metric`);
+        const data = await response.json();
+        displayForecast(data);
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
+    }
 }
 
-// Fetch members
+function displayForecast(data) {
+    const forecastList = document.getElementById('forecast');
+    forecastList.innerHTML = ''; // Clear existing forecast
+
+    for (let i = 0; i < 3; i++) { // Show 3-day forecast
+        const day = data.list[i * 8]; // Getting forecast every 8 hours
+        const temperature = Math.round(day.main.temp);
+        const date = new Date(day.dt * 1000).toLocaleDateString();
+        const description = capitalizeWords(day.weather.map(item => item.description).join(', '));
+        
+        const listItem = document.createElement('li');
+        listItem.innerText = `${date}: ${temperature}°C - ${description}`;
+        forecastList.appendChild(listItem);
+    }
+}
+
+function capitalizeWords(str) {
+    return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
 async function fetchMembers() {
-    const response = await fetch('data/members.json'); // Ensure this path is correct
-    const members = await response.json();
-    const spotlights = members.filter(member => member.membership === 'Gold' || member.membership === 'Silver');
-    const selectedSpotlights = spotlights.sort(() => 0.5 - Math.random()).slice(0, 3);
-
-    const spotlightContent = selectedSpotlights.map(member => `
-        <div class="spotlight">
-            <h3>${member.companyName}</h3>
-            <img src="${member.logo}" alt="${member.companyName} Logo">
-            <p>Phone: ${member.phone}</p>
-            <p>Address: ${member.address}</p>
-            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p>Membership Level: ${member.membership}</p>
-        </div>
-    `).join('');
-
-    document.getElementById('spotlight-content').innerHTML = spotlightContent;
+    try {
+        const response = await fetch('data/members.json');
+        const members = await response.json();
+        const qualifiedMembers = members.filter(member => member.membershipLevel > 1); // Silver and Gold
+        displayMembers(qualifiedMembers);
+    } catch (error) {
+        console.error('Error fetching members:', error);
+    }
 }
 
-// Call the functions to fetch weather and members
+function displayMembers(members) {
+    const membersContainer = document.getElementById('membersContainer');
+    membersContainer.innerHTML = ''; // Clear existing content
+
+    // Randomly select 2 or 3 members to display
+    const selectedMembers = members.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    selectedMembers.forEach(member => {
+        const card = document.createElement('div');
+        card.classList.add('member-card');
+        card.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name}">
+            <h2>${member.name}</h2>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p>Membership Level: ${member.membershipLevel}</p>
+        `;
+        membersContainer.appendChild(card);
+    });
+}
+
+// Initialize the page
+document.getElementById('current-year').innerText = new Date().getFullYear();
+document.getElementById('last-modified').innerText = document.lastModified;
+
 fetchWeather();
 fetchMembers();

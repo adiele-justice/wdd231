@@ -25,22 +25,21 @@ nav a:hover {
 
   header nav {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically if needed */
+    justify-content: center; 
+    align-items: center; 
 
 }
 
-/* Optional: Add some padding and styles for better visibility */
+
 header nav a {
-    padding: 10px 15px; /* Add padding to links */
-    text-decoration: none; /* Remove underline from links */
-    color: #fff /* Text color */
+    padding: 10px 15px; 
+    text-decoration: none; 
+    color: #fff 
 }
 
 /* Media query for larger screens (optional, adjust as needed) */
 @media (min-width: 768px) {
     header nav {
-        /* Additional styles for larger screens if needed */
         /* Example: add some padding */
         padding: 20px;
     }
@@ -71,13 +70,144 @@ header nav a {
     color: black;
 }
 
-.current-events, .weather, .company-spotlights {
-    padding: 20px;
-    background: #f4f4f4;
+
+
+/* Weather section */
+.weather {
     margin: 20px 0;
 }
 
+.weather h3, h2, p {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Base styles for the section */
+.company-spotlights {
+    padding: 20px;
+    background-color: #f8f9fa; 
+}
+
+.company-spotlights h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for members */
+#membersContainer {
+    display: grid;
+    gap: 20px; 
+}
+
+/* Default grid view styles */
+.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* List view styles */
+.list-view {
+    display: block; 
+}
+
+.member-card {
+    background-color: #ffffff; 
+    border: 1px solid #dee2e6; 
+    border-radius: 8px; 
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s; 
+}
+
+.member-card:hover {
+    transform: scale(1.05); 
+}
+
+.member-card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px 8px 0 0; 
+}
+
+.member-card h2 {
+    font-size: 1.5em; 
+    margin: 10px 0; 
+}
+
+.member-card p {
+    margin: 5px 0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-view {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Main styles content */
+main {
+    padding: 10px;
+  }
+  .her {
+    position: relative;
+  }
+  .her img {
+    width: 100%;
+    height: 550px;
+  }
+  .her .hero-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .her h2 {
+    font-size: 2.5rem;
+    font-family: 'Protest Revolution', sans-serif;
+    margin-bottom: 20px;
+    color: #253592;
+  }
+  .her p {
+    font-size: 1.2rem;
+    font-family: 'Protest Riot', sans-serif;
+    color: #253592;
+  }
+/*call to action section styles*/
+.call-to-action {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .call-to-action h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: 'Protest Revolution', sans-serif;
+  }
+  .call-to-action a button:hover {
+    background-color: gray;
+  }
+  .call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: 'Protest Riot', sans-serif;
+  }
+  .call-to-action .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(27, 27, 147);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .call-to-action .cta-btn:hover {
+    background-color: gray;
+  }
 /* form styles */
 input[type="submit"] {
     background-color: #2980b9; 
